@@ -1,0 +1,3 @@
+﻿1|Nintendo Switch|3|300.50
+2|Play Station 4|6|312.25
+3|Xbox Series X|10|500.00
