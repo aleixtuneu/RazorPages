@@ -1,0 +1,35 @@
+﻿@page
+@model RazorPage.Pages.AddProductModel
+@{
+	ViewData["Title"] = "Afegir nou producte";
+}
+
+<h1>Afegir nou producte</h1>
+
+<form action="#" method="post">
+	<div class="form-group">
+		<label asp-for="NewProduct.Id"></label>
+		<input asp-for="NewProduct.Id" class="form-control"/>
+		<span asp-validation-for="NewProduct.Id"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="NewProduct.Name"></label>
+		<input asp-for="NewProduct.Name" class="form-control" />
+		<span asp-validation-for="NewProduct.Name"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="NewProduct.Amount"></label>
+		<input asp-for="NewProduct.Amount" class="form-control" />
+		<span asp-validation-for="NewProduct.Amount"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="NewProduct.Price"></label>
+		<input asp-for="NewProduct.Price" class="form-control" />
+		<span asp-validation-for="NewProduct.Price"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Afegir</button>
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" /> 
+}

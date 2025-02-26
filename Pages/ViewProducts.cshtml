@@ -1,0 +1,35 @@
+﻿@page
+@model RazorPage.Pages.ViewProductsModel
+@{
+	ViewData["Title"] = "Llistat de productes";
+}
+
+<h1>Llistat de Productes</h1>
+<br/>
+
+<table class="table">
+	<thead>
+		<tr>
+			<td>Id</td>
+			<td>Nom</td>
+			<td>Quantitat</td>
+			<td>Preu</td>
+		</tr>
+	</thead>
+	<tbody>	
+		@foreach(var product in Model.Products) 
+		{
+		<tr>
+			<td>@product.Id</td>
+			<td>@product.Name</td>
+			<td>@product.Amount</td>
+			<td>@product.Price</td>
+		</tr>
+		}
+	</tbody>
+
+	<p>@Model.FileErrorMessage</p>
+
+</table>
+
+<a asp-page="/AddProduct" class="btn btn-primary">Afegir Producte</a>
